@@ -1,7 +1,7 @@
 function divideAndConquerSum(a) {
         if (a.length ===0)
         {
-            return;
+            return 0;
         }
         else if (a.length ===1)
         {
