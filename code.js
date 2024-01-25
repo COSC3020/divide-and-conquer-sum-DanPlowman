@@ -7,19 +7,22 @@ function divideAndConquerSum(a) {
         {
             return a[0];
         }
-        else if(a.length <3)
+        else if(a.length ===2)
         {
-            return divideAndConquerSum(a[0])+divideAndConquerSum(a[1])+divideAndConquerSum(a[2]);
+            return a[0]+a[1];
+        }
+        else if(a.length ===3)
+        {
+            return a[0]+a[1]+a[2];
         }
         else
         {
         var min =0;
         var max = a.length;
         var split = Math.floor((min+max/3))
-        var Lmid = split;
-        var Umid = max-split;
-            return divideAndConquerSum(a.slice(0,(split))) + divideAndConquerSum(a.slice((split),(max-split))) + divideAndConquerSum(a.slice((max-split)));
+        let b=a.splice(0,split);
+        let c=a.splice(0,split);
+
+            return divideAndConquerSum(a) + divideAndConquerSum(b) + divideAndConquerSum(c);
         }
 }
-
-console.log(divideAndConquerSum([1,5,2,6,-2,-7,2,7,-5,6,9,-2,2,6]))
