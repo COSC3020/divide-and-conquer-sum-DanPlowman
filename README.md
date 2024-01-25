@@ -26,3 +26,6 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+The runtime of this algorithm is Θ(n^3), this is because the function calls itself 3 times in each recursion, with the variable  assignments and addition being a constant, which can be ignored asymptotically.
+The recurrence relation can be given as T(n) = 3(n/3), it calls itself 3 times, with 1/3 of the array size each time.
