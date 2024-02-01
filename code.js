@@ -1,9 +1,9 @@
 function divideAndConquerSum(a) {
         if (a.length ===0)
         {
-            return;
+            return 0;
         }
-        else if (a.length ===1)
+        else if (a.length <2)
         {
             return a[0];
         }
@@ -18,3 +18,15 @@ function divideAndConquerSum(a) {
             return divideAndConquerSum(a) + divideAndConquerSum(b) + divideAndConquerSum(c);
         }
 }
+let arr =[0];
+console.log(JSON.stringify(divideAndConquerSum(arr)));
+console.log(JSON.stringify(arr.reduce(function(a, b) { return a + b; }, 0)));
+console.log(JSON.stringify(divideAndConquerSum(arr)) == JSON.stringify(arr.reduce(function(a, b) { return a + b; }, 0)));
+arr =[];
+console.log(JSON.stringify(divideAndConquerSum(arr)));
+console.log(JSON.stringify(arr.reduce(function(a, b) { return a + b; }, 0)));
+console.log(JSON.stringify(divideAndConquerSum(arr)) == JSON.stringify(arr.reduce(function(a, b) { return a + b; }, 0)));
+arr =[7];
+console.log(JSON.stringify(divideAndConquerSum(arr)));
+console.log(JSON.stringify(arr.reduce(function(a, b) { return a + b; }, 0)));
+console.log(JSON.stringify(divideAndConquerSum(arr)) == JSON.stringify(arr.reduce(function(a, b) { return a + b; }, 0)));
